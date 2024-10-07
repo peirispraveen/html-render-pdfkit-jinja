@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporal Analysis</title>
+</head>
+<body>
+    <div class="container">
+        <p id="title_main">{{ main_title }}</p>
+        <div class="logo-box">
+            <img src="../imgs/CU_logo.png" alt="Logo Placeholder">
+        </div>
+
+        <div class="temporal-table">
+            <table>
+              <tr>
+                <th>{{ year1 }}</th>
+                <th>{{ year2 }}</th>
+                <th>{{ year3 }}</th>
+                <th>{{ year4 }}</th>
+              </tr>
+              <tr>
+                <td><img src="{{ sat_img1 }}" alt="Image 1"></td>
+                <td><img src="{{ sat_img2 }}" alt="Image 2"></td>
+                <td><img src="{{ sat_img3 }}" alt="Image 3"></td>
+                <td><img src="{{ sat_img4 }}" alt="Image 4"></td>
+              </tr>
+              <tr>
+                <td>{{ def_risk1 }}</td>
+                <td>{{ def_risk2 }}</td>
+                <td>{{ def_risk3 }}</td>
+                <td>{{ def_risk4 }}</td>
+              </tr>
+              <tr>
+                <td>{{ enc_risk1 }}</td>
+                <td>{{ enc_risk2 }}</td>
+                <td>{{ enc_risk3 }}</td>
+                <td>{{ enc_risk4 }}</td>
+              </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="area-info-container">
+    <div class="area-info">
+        <h2>Area Information</h2>
+        <table>
+            <tr>
+                <th>Total Area</th>
+                <th>Inters. - Potec. Areas</th>
+            </tr>
+            <tr>
+                <td>{{ total_area }}</td>
+                <td>{{ int_potec }}</td>
+            </tr>
+            <tr>
+                <th>Inters. - Deforested Area</th>
+                <th>Eligible Area</th>
+            </tr>
+            <tr>
+                <td>{{ int_def_area }}</td>
+                <td>{{ eligible_area }}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="legend-and-data-source">
+        <div class="legend-section">
+            <h2>Legend</h2>
+            <table>
+          <tr>
+            <th>Risk Level</th>
+            <td></td>
+          </tr>
+                <tr>
+                    <td><div class="risk-level low"></div></td>
+                    <td>No Risk Area</td>
+                </tr>
+          <tr>
+              <td><div class="risk-level medium"></div></td>
+            <td>Medium Risk Area</td>
+          </tr>
+          <tr>
+              <td><div class="risk-level high"></div></td>
+            <td>High Risk Area</td>
+          </tr>
+          <tr>
+              <td><div class="risk-level go"></div></td>
+            <td>"Go": Protected Area where certain regulated economic and agricultural activities are allowed under specific conditions (specified in the applicable law)</td>
+          </tr>
+          <tr>
+              <td><div class="risk-level nogo"></div></td>
+            <td>"No Go": strictly protected high conservation area. Agricultural production is not allowed under applicable law.</td>
+          </tr>
+          <tr>
+              <td><div class="risk-level deforestation"></div></td>
+            <td>Areas with tree cover loss</td>
+          </tr>
+        </table>
+        </div>
+        <div class="data-source">
+            <h3>Data Source</h3>
+            <ul>
+                <li>Images: Google Earth</li>
+                <li>Land use identification: Sentinel Hub and satellite data</li>
+                <li>Land use classification: Hansen, M.C. et al. 2013. High-Resolution Global Maps of 21st-Century Forest Cover Change.</li>
+                <li>Protected Area: IUCN and UNEP-WCMC(2023). The World Database on Protected Areas (WDPA), Cambridge, UK: UNEP-WCMC.</li>
+            </ul>
+        </div>
+        <div class="technical-data">
+    <h2>Technical Data</h2>
+    <div class="technical-data-img">
+        <p>{{ scale_meters }}</p>
+        <img src="../imgs/landscale.png" alt="land scale image"/>
+    </div>
+</div>
+    </div>
+</div>
+        <div class="powered-by">
+            <p>Powered by “CarbonEngen” by Engenuity Ai</p>
+        </div>
+    </div>
+</body>
+</html>
